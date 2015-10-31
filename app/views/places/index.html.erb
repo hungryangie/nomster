@@ -52,6 +52,15 @@
 	  		</blockquote>
 			</div>
 		<% end %>
+
+    <% if place.pictures.present? %>
+      <div class="col-xs-12">
+        <blockquote>
+          <%= image_tag place.pictures.last.picture %><br /><br />
+          <%= place.pictures.last.caption %>
+        </blockquote>
+      </div>
+    <% end %>
   </div>
 <% end %>
 
