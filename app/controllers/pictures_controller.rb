@@ -2,7 +2,7 @@ class PicturesController < ApplicationController
 	before_action :authenticate_user!
 	def create
 		@place = Place.find(params[:place_id])
-		@place.pictures.create(picture_params(:user => current_user))
+		@place.pictures.create(picture_params)
     redirect_to place_path(@place)
 	end
 
